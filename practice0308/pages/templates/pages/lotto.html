@@ -1,0 +1,9 @@
+<div class="container" style="border:black; border-width:1px; border-style:solid">
+<h1>로또 당첨 횟수를 알아보자.</h1>
+<hr>
+<h2>이번 회차 당첨 번호 : {{ numbers }} + {{ bonus }} </h2>
+  <p> {% for winner in winners %}
+    <li style="margin-left: 40px;">{{ winner }}등 :  번 </li>
+      {% endfor %}
+  </p>
+</div>

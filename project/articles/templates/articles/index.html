@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock style %}
+{% comment %} settings에서  경로 설정을 해놨으므로, 그 이후의 주소만 쓰면됨 {% endcomment %}
+
+
+{% block content %}
+<img src="{% static 'articles/sample.jpg' %}" alt="iu">
+<h1> HOLA! I'M {{ nickname }} :) </h1>
+<a href="{% url 'articles:greeting' %}">Greeting</a>
+<a href="{% url 'articles:dinner' %}">Dinner</a>
+<a href=" {% url 'articles:throw' %}">Throw</a>
+
+<a href="{% url 'articles:index' %}">Pages Index</a>
+
+{% endblock content %}
+

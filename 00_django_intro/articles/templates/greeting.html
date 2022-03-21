@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1> Greetings!
+    <p> from {{ info.name|lower }} .</p>
+    <br>
+    <p> My favorite fruits are {{ foods }}.</p>
+    <p> Among them, my favorite is {{ foods.0 }}.</p>
+    <p> {% for food in foods %}
+      <p>{{ forloop.counter0 }}번 글 : {{ food }}</p>
+    {% endfor %}
+    </p>
+  </h1>
+{% endblock content %}
+  
